@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106083_Muhammad Rayhan Setiawan_InformatikaB2"/>
+        <attribute name="authors" value="ACER NITRO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-16 09.26.43 PM"/>
+        <attribute name="created" value="QUNFUiBOSVRSTztMQVBUT1AtRFJGSU1BTUg7MjAyNC0wOS0xNjswOS4wNC4wOCBQTTszMDY5"/>
+        <attribute name="edited" value="QUNFUiBOSVRSTztMQVBUT1AtRFJGSU1BTUg7MjAyNC0wOS0xNjswOS4yNi40MyBQTTsxOzMxODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="namabarang" type="String" array="False" size=""/>
+            <output expression="&quot;namabarang&quot;" newline="True"/>
+            <input variable="namabarang"/>
+            <declare name="hargabarang" type="Real" array="False" size=""/>
+            <output expression="&quot;harga barang&quot;" newline="True"/>
+            <input variable="hargabarang"/>
+            <declare name="jumlahbarang, hargatotal, totaldiskon, hitungsisa" type="Integer" array="False" size=""/>
+            <output expression="&quot;jumlah barang&quot;" newline="True"/>
+            <input variable="jumlahbarang"/>
+            <assign variable="hargatotal" expression="0.83 * hargabarang"/>
+            <assign variable="totaldiskon" expression="0.83 * hargatotal"/>
+            <assign variable="hitungsisa" expression="totaldiskon/3"/>
+            <output expression="hitungsisa" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
