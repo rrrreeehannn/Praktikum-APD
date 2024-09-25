@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106083_MuhammadRayhanSetiawan_B'2_24"/>
+        <attribute name="authors" value="ACER NITRO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-25 01.17.13 PM"/>
+        <attribute name="created" value="QUNFUiBOSVRSTztMQVBUT1AtRFJGSU1BTUg7MjAyNC0wOS0yNTsxMi4wNC4yNyBQTTszMDY0"/>
+        <attribute name="edited" value="QUNFUiBOSVRSTztMQVBUT1AtRFJGSU1BTUg7MjAyNC0wOS0yNTswMS4xNy4xMyBQTTsxOzMxNjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="beratmg, tinggikm, beratkg, tinggim, bmi" type="Real" array="False" size=""/>
+            <declare name="kategori" type="String" array="False" size=""/>
+            <input variable="beratmg"/>
+            <input variable="tinggikm"/>
+            <assign variable="beratkg" expression="beratmg / 100000"/>
+            <assign variable="tinggim" expression="tinggikm * 1000"/>
+            <assign variable="bmi" expression="beratkg / (tinggim ^ 2)"/>
+            <if expression="bmi &lt; 18">
+                <then>
+                    <assign variable="kategori" expression="&quot;berat badan kurang (Underweight)&quot;"/>
+                </then>
+                <else>
+                    <if expression="bmi &lt; 18">
+                        <then>
+                            <assign variable="kategori" expression="&quot;berat badan normal&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="bmi &lt; 18">
+                                <then>
+                                    <assign variable="kategori" expression="&quot;berat badan berlebih (Overweight)&quot;"/>
+                                </then>
+                                <else>
+                                    <assign variable="kategori" expression="&quot;obesitas&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;BMI anda adalah: &quot; &amp; bmi" newline="True"/>
+            <output expression="&quot;kategori: &quot; &amp; kategori" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
